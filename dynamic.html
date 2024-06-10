@@ -8,8 +8,7 @@
     </title>
   </head>
   <style>
-      body {background-color: #add8e6
-           }
+    body {background-color: #add8e6}
   </style>
   <body>
     <a href = "index.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a>
@@ -18,21 +17,25 @@
     </h1>
     <div id="content"> </div>
     <img src = "image.jpg" alt = "image of mount fuji from a gas station point of view" width="600" height = "400">
+    <button id="addContentBtn">Add Dynamic Content</button>
     <script>
-      document.addEventListener('DOMContentloaded', () => {
-        const contentDiv= document.getElementById('content');
-        const newElement= document.createElement('div');
-        newElement.className= 'dynamic-content';
-        newElement.textContent= 'Dynamic Content';
+      document.addEventListener('DOMContentLoaded', () => {
+        const button = document.getElementById('addContentBtn');
+        button.addEventListener('click', () => {
+          const contentDiv= document.getElementById('content');
+          const newElement= document.createElement('div');
+          newElement.className= 'dynamic-content';
+          newElement.textContent= 'Dynamic Content';
 
-        const styles= {
-          color: 'green', 
-          fontSize: '20px',
-          textAlign: 'center',
-          marginTop: '20px'
-       };
-        Object.assign(newElement.style, styles);
-        contentDiv.appendChild(newElement);
+          const styles= {
+            color: 'green', 
+            fontSize: '20px',
+            textAlign: 'center',
+            marginTop: '20px'
+          };
+          Object.assign(newElement.style, styles);
+          contentDiv.appendChild(newElement);
+        });
       });
     </script>
   </body>
