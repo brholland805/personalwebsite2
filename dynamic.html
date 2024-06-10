@@ -4,23 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery Page</title>
-    <style>
-      body {
-        background-color: #add8e6;
-      }
-    </style>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <a href="index.html">Home</a> | 
-    <a href="about.html">About</a> | 
-    <a href="contact.html">Contact</a>
-    
+    <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a>
     <h1>Gallery Page</h1>
     <div id="content"></div>
-    <img src="image.jpg" alt="image of mount fuji from a gas station point of view" width="600" height="400">
-    <button id="addContentBtn">DON'T CLICK HERE</button>
-    
+    <img class="dynamic-zoom" src="images/image.jpg" alt="image of mount fuji from a gas station point of view" width="600" height="400">
+    <button id="addContentBtn">Add Dynamic Content</button>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const button = document.getElementById('addContentBtn');
@@ -28,17 +19,9 @@
           const contentDiv = document.getElementById('content');
           const newElement = document.createElement('div');
           newElement.className = 'dynamic-content';
-          newElement.textContent = 'YOU SHOULD NOT HAVE CLICKED THERE';
+          newElement.textContent = 'Dynamic Content';
           
-          const styles = {
-            color: 'green',
-            fontSize: '20px',
-            textAlign: 'center',
-            marginTop: '20px'
-          };
-          
-          Object.assign(newElement.style, styles);
-          contentDiv.appendChild(newElement); // This adds the new element at the bottom of the #content div
+          contentDiv.appendChild(newElement);
         });
       });
     </script>
