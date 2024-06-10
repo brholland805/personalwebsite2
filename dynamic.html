@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a> | <a href="about.html">Azbout</a> | <a href="contact.html">Contact</a>
     <h1>Gallery Page</h1>
     <div id="content"></div>
     <img src="images/image.jpg" alt="image of mount fuji from a gas station point of view" width="600" height="400">
-    <button id="addContentBtn">Add Dynamic Content</button>
+    <button id="addContentBtn">DON't CLICK HERE</button>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const button = document.getElementById('addContentBtn');
@@ -19,7 +19,7 @@
           const contentDiv = document.getElementById('content');
           const newElement = document.createElement('div');
           newElement.className = 'dynamic-content';
-          newElement.textContent = 'Dynamic Content';
+          newElement.textContent = 'YOU SHOULD NOT HAVE CLICKED THERE';
           
           contentDiv.appendChild(newElement);
         });
