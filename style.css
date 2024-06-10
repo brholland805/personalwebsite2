@@ -9,3 +9,20 @@ body{
   margin-top: 20px;
   transition: color 0.5s ease;
 }
+
+.dynamic-content:hover{
+  color: red,
+}
+
+nav a {
+  margin: 0 10px;
+}
+
+img {
+  transition: transform 0.5s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+  
